@@ -28,7 +28,7 @@
 ## 🚀 Быстрый старт (для разработчиков)
 ```bash
 # Клонировать репозиторий
-git clone https://github.com/ваш-логин/promvent.git
+git clone https://github.com/julia-myaso00/promvent-site
 
 # Перейти в папку проекта
 cd promvent
