@@ -1,12 +1,12 @@
 // Функции валидации формы обратной связи
 
-function validateEmail(email) {
-    if (!email) return false;
+function validateEmail(email, isRequired = true) {
+    if (!email) return !isRequired;
     return email.includes('@') && email.includes('.');
 }
 
-function validatePhone(phone) {
-    if (!phone) return false;
+function validatePhone(phone, isRequired = true) {
+    if (!phone) return !isRequired;
     const digits = phone.replace(/\D/g, '');
     return digits.length >= 10;
 }
@@ -14,11 +14,11 @@ function validatePhone(phone) {
 function validateForm(formData) {
     const errors = {};
     
-    if (!validateEmail(formData.email)) {
+    if (!validateEmail(formData.email, true)) {
         errors.email = 'Введите корректный email';
     }
     
-    if (!validatePhone(formData.phone)) {
+    if (!validatePhone(formData.phone, true)) {
         errors.phone = 'Введите корректный номер телефона';
     }
     
