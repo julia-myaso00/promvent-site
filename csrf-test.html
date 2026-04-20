@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Внешняя форма (без CSRF-токена)</h2>
+    <form action="https://ваш-сайт/submit-form" method="POST">
+        <input name="name" value="Взломщик"><br>
+        <input name="email" value="hacker@evil.com"><br>
+        <input name="phone" value="000000"><br>
+        <textarea name="message">Спам-сообщение</textarea><br>
+        <button type="submit">Отправить (взлом)</button>
+    </form>
+    <p>Если CSRF-защита не работает – форма отправится!</p>
+</body>
+</html>
